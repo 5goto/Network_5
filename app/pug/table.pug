@@ -1,0 +1,824 @@
+extends templates/header
+block variables 
+	-currentPage = "index"
+block main
+	section.graphs
+		div.first 
+			details
+				summary Построение графика
+				form
+					table
+						tr
+							th Значениe по оси OX
+							th Результат
+						tr
+							td
+								input(type="radio" name="absc" value="0")
+								| Производитель <br>
+							td
+								input(type="checkbox" name="ord" value="0")
+								| Длина мензуры <br>
+								input(type="checkbox" name="ord" value="1")
+								| Год производства <br>
+					input(type="button" value="Построить график")
+		.second 
+			details
+				summary Сортировка
+				form
+					select(name="sortFirst")
+						option(value="0") Название
+						option(value="1") Количество ладов
+						option(value="2") Цена
+						option(value="3") Материал топа
+						option(value="4") Цвет
+					input(type="button" value="Сортировка 1-ый уровень")
+				form
+					select(name="sortSecond")
+						option(value="0") Название
+						option(value="1") Количество ладов
+						option(value="2") Цена
+						option(value="3") Материал топа
+						option(value="4") Цвет
+					input(type="button" value="Сортировка 2-ой уровень")
+				form
+					select(name="sortThird")
+						option(value="0") Название
+						option(value="1") Количество ладов
+						option(value="2") Цена
+						option(value="3") Материал топа
+						option(value="4") Цвет
+					input(type="button" value="Сортировка 3-ий уровень")
+
+
+		.third 
+			details
+				summary Фильтр
+				form
+					p 
+						label(for="BrandName") Производитель <br>
+							input(type="text" name="Brand")
+					p 
+						label(for="topMat") Модель <br>
+							input(type="text" name="topMaterial")
+					p
+						label(for="fret") Количество ладов <br> 
+							input(type="text" name="fretNumPre")
+							|(Минимум) <br>
+							input(type="text" name="fretNumTo")
+							|(Максимум) <br>
+						label(for="color") Форма корпуса <br>
+							input(type="text" name="typeName")	
+					p
+						label(for="yFrom") Год производства <br> От
+							input(type="text" name="yearPre")
+							|<br>До
+							input(type="text" name="yearTo")
+						br
+						input(type="button" value="Поиск")
+					p
+						label(for="yFrom") Длина мензуры <br> От 
+							input(type="text" name="menPre")
+							|<br> До
+							input(type="text" name="menTo")
+						br
+						input(type="button" value="Поиск")
+					p Количество струн <br>
+						input(type="radio" name="stringsNum" value="0")
+						|6<br>
+						input(type="radio" name="stringsNum" value="1")
+						|7<br>
+						input(type="radio" name="stringsNum" value="2")
+						|8<br>
+					input(type="button" value="Поиск")
+
+	section.table-and-graphs
+		table.diff-table 
+			tr 
+				td Производитель
+				td Модель
+				td Форма корпуса
+				td Количество струн
+				td Количество ладов
+				td Длина мензуры
+				td Год производства
+			tr 
+				td Rusich
+				td Balalayka HH Red Russia 2022
+				td Balalaika
+				td 6
+				td 24
+				td 24.75
+				td 2022
+			tr 
+				td Rusich
+				td Crusader HH Red Russia 2022
+				td Double cut
+				td 6
+				td 24
+				td 25.5
+				td 2022
+			tr 
+				td Rusich
+				td Stratocaster SSS Brown Russia 2022
+				td Starcaster
+				td 6
+				td 22
+				td 25.5
+				td 2022
+			tr 
+				td Rusich
+				td Berserk Black HS Black Russia 2022
+				td Double cut
+				td 6
+				td 27
+				td 25.5
+				td 2022
+			tr 
+				td Solar Guitars
+				td A2.6FBB Baritone Flame Black Matte
+				td Double cut
+				td 6
+				td 24
+				td 26.5
+				td 2019
+			tr 
+				td Rusich
+				td Grinch HH Green Russia 2022
+				td Double cut
+				td 6
+				td 24
+				td 25.5
+				td 2022
+			tr 
+				td Cort
+				td KX300 Etched Black Red
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2004
+			tr 
+				td Rusich
+				td Spider HH Russia 2022
+				td Double cut
+				td 6
+				td 27
+				td 25.5
+				td 2022
+			tr 
+				td Aria
+				td PE-EXO Natural
+				td Single cut
+				td 6
+				td 22
+				td 24.75
+				td 2001
+			tr 
+				td Aria
+				td HM-III MS Silver
+				td Warlock
+				td 6
+				td 20
+				td 25.5
+				td 2005
+			tr 
+				td Aria
+				td MAC-60 Blue
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2001
+			tr 
+				td Rusich
+				td Navigator HH Natural Russia 2022
+				td Warrior
+				td 6
+				td 24
+				td 25.5
+				td 2022
+			tr 
+				td Aria
+				td HM-III MBK
+				td Warlock
+				td 6
+				td 24
+				td 25.5
+				td 2011
+			tr 
+				td Aria
+				td MAC-60 AN Amber Natural
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2008
+			tr 
+				td Cort
+				td CR250 Vintage Burst
+				td Single cut
+				td 6
+				td 22
+				td 24.75
+				td 2009
+			tr 
+				td Burny
+				td RLG60 VLD
+				td Les Paul
+				td 6
+				td 22
+				td 24.75
+				td 2019
+			tr 
+				td Rusich
+				td Spider SH Red Russia 2022
+				td Superstrat
+				td 6
+				td 27
+				td 25.5
+				td 2022
+			tr 
+				td Aria
+				td MAC-45 2TS Two Tone Sunburst
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2002
+			tr 
+				td Epiphone
+				td Les Paul Special Vintage Edition Vintage Sunburst
+				td Les Paul
+				td 6
+				td 22
+				td 24.75
+				td 2019
+			tr 
+				td Fernandes
+				td Revolver XX RXX06 Black
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2014
+			tr 
+				td Fernandes
+				td Stratocaster LE-1Z HH Laurel FB Cream White
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2010
+			tr 
+				td Aria
+				td HM-IV BK Black
+				td Warlock
+				td 6
+				td 22
+				td 25.5
+				td 2007
+			tr 
+				td Fernandes
+				td Stratocaster LE-1Z SSS Laurel FB Black
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2005
+			tr 
+				td Fernandes
+				td Stratocaster LE-1Z SSS Maple FB 2-Tone Sunburst
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2007
+			tr 
+				td Fernandes
+				td Revolver X RX08 Metallic Red
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2007
+			tr 
+				td Fernandes
+				td Revolver XX RXX06 Snow White
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2013
+			tr 
+				td Fernandes
+				td Stratocaster LE-1Z SSS Laurel FB Candy Apple Red
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2004
+			tr 
+				td Aria
+				td MAC-30 BK Black
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2003
+			tr 
+				td Fernandes
+				td Stratocaster LE-1Z SSS Laurel FB 3-Tone Sunburst
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2000
+			tr 
+				td Ukolov Guitars
+				td Lotus MS-6 HH Natural Russia 2022
+				td Double cut
+				td 6
+				td 24
+				td 26.5
+				td 2022
+			tr 
+				td Ukolov Guitars
+				td RGS Custom HH Natural Russia 2022
+				td Double cut
+				td 6
+				td 24
+				td 25.5
+				td 2022
+			tr 
+				td Rusich
+				td Avatar SH Blue Russia 2022
+				td Double cut
+				td 6
+				td 27
+				td 25.5
+				td 2022
+			tr 
+				td Ukolov Guitars
+				td Tanto MS-6 HH Ash Natural Russia 2022
+				td Double cut
+				td 6
+				td 24
+				td 26.5
+				td 2022
+			tr 
+				td Homage
+				td HEG350 Telecaster SS Black
+				td Telecaster
+				td 6
+				td 22
+				td 25.5
+				td 2016
+			tr 
+				td Fender
+				td Custom Shop Journeyman 50's Jazzmaster Relic Faded 3-color Sunburst
+				td Jazzmaster
+				td 6
+				td 21
+				td 25.5
+				td 2000
+			tr 
+				td Fender
+				td American Ultra Stratocaster Maple FB Texas Tea
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2015
+			tr 
+				td G&L
+				td Fullerton Deluxe S-500 Old School Tobacco Sunburst SSS USA w/gigbag 2020
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2020
+			tr 
+				td Fender
+				td 75th Anniversary Commemorative Telecaster 2-color Bourbon Burst
+				td Telecaster
+				td 6
+				td 22
+				td 25.5
+				td 2011
+			tr 
+				td Bridgecraft
+				td Music Village 1 Dragon-Thing Blue
+				td Dragon-Thing
+				td 6
+				td 24
+				td 25.5
+				td 2019
+			tr 
+				td Fender
+				td Vintage Reissue '57 Stratocaster S-S-S Sunburst USA W/Case2008
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2020
+			tr 
+				td Gibson
+				td Firebird HH Sunburst USA w/case 2019
+				td Firebird
+				td 6
+				td 22
+				td 24.75
+				td 2019
+			tr 
+				td Fender
+				td American Performer Telecaster SS Rosewood USA w/gigbag 2018
+				td Telecaster
+				td 6
+				td 22
+				td 25.5
+				td 2018
+			tr 
+				td Fender
+				td American Standard Stratocaster SSS Sunburst USA 2006
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2006
+			tr 
+				td Godin
+				td SD 24 HSS Purple USA 2000's
+				td Single cut
+				td 6
+				td 24
+				td 24.75
+				td 2000
+			tr 
+				td Fender
+				td Stratocater MIM SSS Black Mexico w/gigbag 2008
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2008
+			tr 
+				td Fender
+				td Deluxe Stratocaster SSS Black Mexico 2006
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2006
+			tr 
+				td Grass
+				td Roots G-LP-60C BLK HH Black Korea 2000's
+				td Les Paul
+				td 6
+				td 22
+				td 24.75
+				td 2000
+			tr 
+				td Charvel
+				td Refinement Les Paul HH Silver Japan 1990s
+				td Les Paul
+				td 6
+				td 22
+				td 24.75
+				td 1990
+			tr 
+				td Fender
+				td Squier Telecaster Contemporary HH Candy Apple Red China 2017
+				td Telecaster
+				td 6
+				td 22
+				td 25.5
+				td 2017
+			tr 
+				td Kramer
+				td Striker HSS Sunburst Korea 1990's
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 1990
+			tr 
+				td Yamaha
+				td RGX121Z HH Black Indonesia 2010's
+				td Superstrat
+				td 6
+				td 22
+				td 25.5
+				td 2010
+			tr 
+				td Charvette
+				td by Charvel 170 HS Black Japan 1990's
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 1990
+			tr 
+				td Fender
+				td Stratocaster Blacktop HH Black Mexico 2014
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2014
+			tr 
+				td Gibson
+				td Les Paul LPJ "120th Anniversary" HH Cherry Satin w/gigbag USA 2014
+				td Les Paul
+				td 6
+				td 22
+				td 24.75
+				td 2014
+			tr 
+				td Mutagen
+				td Steroid Strat SSS Green Russia 2010's
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2010
+			tr 
+				td Schecter
+				td Custom Omen Extreme-6 Floyd Rose HH Vintage Sunburst Indonesia w/gigbag 2021
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2021
+			tr 
+				td Jackson
+				td DK2M HH Crimson Swirl w/gigbag Japan 2009
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2009
+			tr 
+				td Epiphone
+				td Les Paul Standard HH Pelham Blue China 2013 w/case
+				td Les Paul
+				td 6
+				td 22
+				td 24.75
+				td 2004
+			tr 
+				td RD
+				td Artist Masterbuild H-H Natural w/gigbag Russia 2021
+				td Double cut
+				td 6
+				td 22
+				td 25.5
+				td 2021
+			tr 
+				td Tokai
+				td Love Rock LS60 2T HH Tobacoburst Japan 1981
+				td Les Paul
+				td 6
+				td 22
+				td 24.75
+				td 1981
+			tr 
+				td Jackson
+				td Pro DK2 HH Charcoal Grey w/gigbag Mexico 2017
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2017
+			tr 
+				td Epiphone
+				td SG Standard HH Chery Red China 2000's
+				td SG
+				td 6
+				td 22
+				td 25.5
+				td 2000
+			tr 
+				td Gibson
+				td Les Paul Junior LPJ HH White w/gigbag USA 2013
+				td Les Paul
+				td 6
+				td 22
+				td 24.75
+				td 2013
+			tr 
+				td Washburn
+				td Mercury MG-94 HSH Natural USA 1992
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 1992
+			tr 
+				td Fender
+				td Stratocaster Standard SSS 3-Tone Sunburst Mexico 2005
+				td Stratocaster
+				td 6
+				td 21
+				td 25.5
+				td 2005
+			tr 
+				td PRS
+				td SE Tremonti Standard HH Black Korea 2002
+				td Double cut
+				td 6
+				td 22
+				td 24.75
+				td 2002
+			tr 
+				td Fender
+				td Stratocaster MN SSS Chrome Red w/gigbag Mexico 2006
+				td Starcaster
+				td 6
+				td 21
+				td 25.5
+				td 2006
+			tr 
+				td Fender
+				td Classic Series '72 Telecaster Custom SH Black w/case & gigbag Mexico 2010
+				td Telecaster
+				td 6
+				td 21
+				td 25.5
+				td 2010
+			tr 
+				td Squier
+				td Stratocaster Tom Delonge Surf Green H w/gigbag China 2000"s
+				td Stratocaster
+				td 6
+				td 21
+				td 25.5
+				td 2000
+			tr 
+				td Ibanez
+				td Prestige RG1570 Blue HH Japan 2004
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 2004
+			tr 
+				td Yamaha
+				td RGX612D НSS White Japan 1980's
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 1980
+			tr 
+				td EVH
+				td Wolfgang Standart Green HH Indonesia 2015
+				td Superstrat
+				td 6
+				td 22
+				td 25.5
+				td 2015
+			tr 
+				td History
+				td SZ-1HM HSS CAR w/gigbag Japan 2005
+				td Stratocaster
+				td 6
+				td 22
+				td 24.75
+				td 2005
+			tr 
+				td Epiphone
+				td Les Paul Studio HH Sunburst Korea 1998
+				td Les Paul
+				td 6
+				td 22
+				td 24.75
+				td 1998
+			tr 
+				td Aria
+				td Pro II PE-INSPIRE Super Grade Series Natural Korea 2000s
+				td Les Paul
+				td 6
+				td 22
+				td 25.5
+				td 2000
+			tr 
+				td Fender
+				td Squier Telecaster Deluxe MN HH Black China 2020s
+				td Thunderbird
+				td 6
+				td 22
+				td 25.5
+				td 2020
+			tr 
+				td Fender
+				td Telecaster SS Butterscotch Blonde w/gigbag USA 2016
+				td Telecaster
+				td 6
+				td 22
+				td 25.5
+				td 2016
+			tr 
+				td Carvin
+				td DC-127 HH Black w/gigbag USA 1990s
+				td Superstrat
+				td 6
+				td 24
+				td 25.5
+				td 1990
+			tr 
+				td Ibanez
+				td RX180GQ HSH Tabacco Burst Japan 1990s
+				td Superstrat
+				td 6
+				td 22
+				td 25.5
+				td 1990
+			tr 
+				td LTD
+				td Viper 200-FM HH STBC Indonesia 2006
+				td Double cut
+				td 6
+				td 24
+				td 24.75
+				td 2006
+			tr 
+				td Fender
+				td Highway One Telecaster SS 3-color Sunburst USA 2006
+				td Telecaster
+				td 6
+				td 22
+				td 25.5
+				td 2006
+			tr 
+				td Schecter
+				td Diamond Series X50 HH Black Indonesia 2009
+				td Double cut
+				td 6
+				td 22
+				td 25.5
+				td 2009
+			tr 
+				td FireWood
+				td Mockingbird Masterbild Black w/case Europe 2010s
+				td Mockingbird
+				td 6
+				td 24
+				td 25.5
+				td 2010
+			tr 
+				td Squier
+				td by Fender Affinity Stratocaster SSS Black China 2010s
+				td Starcaster
+				td 6
+				td 21
+				td 25.5
+				td 2010
+			tr 
+				td Baccus
+				td Universe Stratocaster SSS Black China 2010's
+				td Starcaster
+				td 6
+				td 21
+				td 25.5
+				td 2010
+			tr 
+				td Greco
+				td Device SPF-40 Black Japan 1987
+				td Superstrat
+				td 6
+				td 22
+				td 24.8
+				td 1987
+			tr 
+				td Fender
+				td Bullet Deluxe SS Vintage Blonde w/gigbag USA 1980's
+				td Stratocaster
+				td 6
+				td 21
+				td 25.5
+				td 1980
+			tr 
+				td Constructor
+				td Stratocaster SSS Natural Brown Russia 2022
+				td Stratocaster
+				td 6
+				td 22
+				td 25.5
+				td 2022
+			tr 
+				td B.C.Rich
+				td Marion HH Black China 2000s
+				td Double cut
+				td 6
+				td 22
+				td 24.75
+				td 2000
+			tr 
+				td Gibson
+				td Explorer HH Black w/case w/gigbag USA 2001
+				td Explorer
+				td 6
+				td 22
+				td 24.75
+				td 2001
+

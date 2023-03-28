@@ -3,18 +3,100 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title></title>
+    <title>CSS</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
-    <p>Successfully!</p>
-    <p>Now you have Browser Sync, Pug, Stylus, Autoprefixer, jQuery, Bootstrap Reboot</p>
-    <p>Folder src/ for PSD templates, JPG previews etc.</p>
-    <p>Folder app/ for Pug and Stylus files. app/pug/index.pug will transpiled to dist/index.html. app/styl/main.styl will transpiled to dist/css/main.css</p>
-    <p>Folder dist/ - distributive folder - here transpiled index.html and css/main.css, and you can add here other CSS, JS, IMG, FONTS files</p>
-    <p>Have a nice coding :)</p>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <div class="wrapper">
+      <header class="header">
+        <div class="logo"><a href="index.html">MusRoom</a></div>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li><a href="#.html">Каталог</a></li>
+            <li><a href="#.html">Студия</a></li>
+            <li><a href="#.html">Наши партнеры</a></li>
+            <li><a href="#.html">Наша команда</a></li>
+            <li><a href="#.html">F.A.Q</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="main-page">
+          <div class="text-card">
+            <div class="text-wrap-main">
+              <p class="promo">Салон музыкальных инструментов</p>
+              <p class="main-title">Music ShowRoom</p>
+              <p class="description">Прикоснитесь к легендарному <br/>качеству уже сегодня</p>
+            </div>
+          </div>
+        </section>
+        <section class="pluses"> 
+          <div class="top-side">
+            <div class="card"><img src="/img/global.png" alt=""/>
+              <p class="inner-card-text">Удобная система заказов интересующих вас товаров</p>
+            </div>
+            <div class="card"> <img src="/img/gift.png" alt=""/>
+              <p class="inner-card-text">Бонусы и подарки для каждого клиента</p>
+            </div>
+          </div>
+          <div class="bottom-side">
+            <div class="card"><img src="/img/box.png" alt=""/>
+              <p class="inner-card-text">Возможность доставки ваших покупок в любую точку страны</p>
+            </div>
+            <div class="card"><img src="/img/revord.png" alt=""/>
+              <p class="inner-card-text">Нас выбирают известные студии и музыкальные сообщества</p>
+            </div>
+          </div>
+        </section>
+        <section class="items">
+          <h2>Гитары</h2>
+          <div class="top-side-items">
+            <div class="card-item"><img class="guitar-tab" src="/img/acoustic.png" alt=""/>
+              <p class="inner-card-text">Акустические гитары</p>
+            </div>
+            <div class="card-item"><img class="guitar-tab" src="/img/classic.png" alt=""/>
+              <p class="inner-card-text">Классические гитары</p>
+            </div>
+          </div>
+          <div class="bottom-side-items">
+            <div class="card-item"><img class="guitar-tab" src="/img/electro.png" alt=""/><a href="guitar.html">
+                <p class="inner-card-text">Электрогитары</p></a></div>
+            <div class="card-item"><img class="guitar-tab" src="/img/bass.png" alt=""/>
+              <p class="inner-card-text">Басс-гитары</p>
+            </div>
+          </div>
+        </section>
+        <section class="gallery">
+          <h2 class="description-gallery">Галерея</h2><img class="gal-main" src="/img/bass_g.jpg" alt=""/>
+          <div class="gallery-pic"><img class="gal-item" src="/img/bass_g.jpg" alt=""/><img class="gal-item" src="/img/classic_big.jpg" alt=""/><img class="gal-item" src="/img/electro.jpg" alt=""/><img class="gal-item" src="/img/footer_part.jpg" alt=""/><img class="gal-item" src="/img/ins1.png" alt=""/><img class="gal-item" src="/img/room.jpg" alt=""/></div>
+        </section>
+      </main>
+      <footer class="footer"> 
+        <div class="bottom-links">
+          <ul>
+            <li><a href="#.html">Каталог</a></li>
+            <li><a href="#.html">Студия</a></li>
+            <li><a href="#.html">Наши партнеры</a></li>
+            <li><a href="#.html">Наша команда</a></li>
+            <li><a href="#.html">F.A.Q</a></li>
+            <li><a href="table.html">Сравнительная таблица гитар</a></li>
+          </ul>
+        </div>
+        <div class="contacts">
+          <div class="phone"><img src="/img/phone.png" alt=""/>
+            <p>+79245553124</p>
+          </div>
+          <div class="mail"><img src="/img/mail.png" alt=""/>
+            <p>musicShowroom@gmail.com</p>
+          </div>
+          <div class="address"><img src="/img/locate.png" alt=""/>
+            <p>г. Владивосток, ул. Некрасовская, д. 3</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/main.js"> </script>
   </body>
 </html>

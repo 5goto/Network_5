@@ -1,13 +1,529 @@
 // Please delete before starting
+// body
+// 	height 100vh
+// 	background-color: #0093E9;
+// 	background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+// 	display flex
+// 	align-items center
+// 	justify-content center
+// 	font-size 16px
+// 	color #fff
+// 	text-align center
+// 	flex-direction column
+// 	padding 30px
+
+
+@font-face 
+  font-family: "Eater";
+  src: url(../fonts/Eater/Eater-Regular.ttf);
+
+
+@font-face 
+  font-family: "Gabriela";
+  src: url(../fonts/Gabriela/Gabriela-Regular.ttf);
+
+
+html
 body
-	height 100vh
-	background-color: #0093E9;
-	background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-	display flex
-	align-items center
-	justify-content center
-	font-size 16px
-	color #fff
-	text-align center
-	flex-direction column
-	padding 30px
+  height: 100%;
+  line-height: 1;
+
+body 
+  font-size: 40;
+  color: #282424;
+  background-image: url("../img/first.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+.wrapper 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 88%;
+  margin: auto;
+  box-shadow: 5px 5px 30px rgba(255, 69, 0, 0.3);
+
+.logo
+  font-family: "Eater";
+  font-size: 3em;
+  text-transform: uppercase;
+  color: #ff5207;
+
+.logo a
+	text-transform: uppercase;
+	text-decoration: none;
+	color: invert()
+	color: #ff5207;
+	&:visited
+		text-transform: uppercase;
+		text-decoration: none;
+		color: invert()
+
+.main
+  flex: 1 1 auto;
+
+.header 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 140px;
+	// border-radius: 50%;
+	padding: 2%;
+	background: linear-gradient(rgba(34, 32, 32, 0.7), black)
+	// border-bottom: 10px solid rgba(255, 69, 0, 0.3)
+
+.menu__list
+  display: flex;
+  justify-content: space-between;
+
+.header__menu
+  flex: 0 1 50%;
+
+.header__menu ul
+  list-style-type: none;
+
+.header__menu ul a
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #ff5207;
+	&:hover
+		box-shadow: 10px 10px 50px rgba(255, 69, 0, 0.3);
+		color: invert()
+
+.header__menu ul a
+	&:visited
+		text-transform: uppercase;
+		text-decoration: none;
+		color: invert()
+
+/////////////////
+
+.main-page
+  border-radius: 30px;
+  border-bottom-right-radius: 0;
+  height: 740px;
+  position: relative;
+
+.text-card
+  padding-top: 10%;
+  color: white;
+  max-width: 70%;
+  text-align: center;
+  margin: auto
+
+.promo
+  font-size: 24px;
+
+.main-title
+  font-family: "Eater";
+  font-size: 100px;
+  margin: 0;
+  color: #ff5207;
+  margin-bottom: 200px;
+
+.description
+  font-family: "Gabriela";
+  font-size: 48px;
+  margin-bottom: 100px;
+
+.try-button
+	width: 470px;
+	height: 100px;
+	border-radius: 30px;
+	background-color: #ff5207;
+	margin: auto;
+	font-size: 40px;
+	color: #ff5207;
+	position: relative;
+	text-decoration: none;
+	&:hover
+		text-shadow: #ff5207 1px 0 10px;
+		color: invert()
+	&:visited
+		text-transform: uppercase;
+		text-decoration: none;
+		color: invert()
+  
+
+// .try-button a
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   margin-right: -50%;
+//   transform: translate(-50%, -50%);
+//   text-decoration: none;
+
+.try-button p 
+	text-align: center
+	text-decoration: none;
+	font-size: 1.5em
+
+section.pluses
+	display: flex
+	justify-content: space-around
+	flex-direction: column
+	// width: 60%
+	height: 400px
+	background: linear-gradient(black, rgba(34, 32, 32, 0.7));
+	// background-color: rgb(202, 72, 72)
+
+div.top-side
+	display: flex
+	justify-content: space-around
+
+div.bottom-side
+	display: flex
+	justify-content: space-around
+
+div.card
+	width: 20%
+	height: 150px
+	text-align: center
+	color: white
+	// height: 100px;
+	// border: 5px solid #ff5207;
+	box-shadow: 0px 0px 5px 5px #ff5207;
+	margin: auto
+	display: flex
+	flex-direction: column
+	align-content: center
+	&:hover
+		background-color: rgb(24, 23, 23)
+		box-shadow: 0px 0px 20px 20px #ff5207;
+
+
+div.card img
+	margin: auto
+
+/////// Guitars
+
+section.items
+	display: flex
+	justify-content: space-around
+	flex-direction: column
+	height: 1000px
+	// width: 80%
+	margin: auto
+	background: linear-gradient(rgba(34, 32, 32, 0.7), black)
+
+div.top-side-items
+	display: flex
+	justify-content: space-around
+div.bottom-side-items
+	display: flex
+	justify-content: space-around
+
+.guitar-tab
+	width: 70%
+	margin: auto
+
+div.card-item
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	width: 30%
+	height: 400px
+	text-align: center
+	box-shadow: 0px 0px 5px 5px #ff5207;
+	margin: auto
+	color: white
+	font-family: "Gabriela";
+	font-size: 38px;
+
+	display: flex
+	flex-direction: column
+	align-content: center
+
+	// background-color: rgb(24, 23, 23)
+	&:hover
+		background-color: #ff5207;
+		box-shadow: 0px 0px 20px 20px #ff5207;
+
+h2
+	font-family: "Gabriela";
+	font-size: 48px;
+	text-align: center
+	color: white
+
+////////Gallery
+
+section.gallery
+	display: flex
+	justify-content: space-around
+	flex-direction: column
+	// width: 80%
+	margin: auto
+	padding: 30px
+	background: linear-gradient(black, rgba(34, 32, 32, 0.7));
+	// background-color: rgba(34, 32, 32, 0.7);
+	// box-shadow: 0px 0px 5px 5px #ff5207;
+
+div.gallery-pic
+	display: flex
+	margin-top: 50px
+	overflow: scroll
+	overflow-y: hidden
+	overflow-x: hidden
+
+body
+	scrollbar-width: thin;
+	scrollbar-color: #ff5207 rgba(34, 32, 32, 0.7);
+
+.gal-item
+	width: 300px
+	height: 130px
+	margin: auto
+	border: solid 3px #ff5207;
+	&:hover
+		box-shadow: 0px 0px 5px 5px #ff5207;
+
+
+.gal-main
+	max-width: 40%
+	max-height: 300px
+	margin: auto
+	box-shadow: 0px 0px 5px 5px #ff5207;
+	&:hover
+		scale: 2
+
+.footer
+	height: 200px
+	background-color: #181616
+	display: flex
+	justify-content: space-between
+	align-items: center
+	color: white
+
+
+.bottom-links ul
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.2em
+
+.bottom-links
+	width: 60%
+
+.bottom-links a 
+	text-transform: uppercase;
+	text-decoration: none;
+	color: invert()
+	color: #ff5207;
+	&:visited
+		text-transform: uppercase;
+		text-decoration: none;
+		color: invert()
+	&:hover
+		text-shadow: #ff5207 1px 0 10px;
+
+.contacts
+	height: 80%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	text-indent: 20px
+
+.phone
+	display: flex
+	align-items: center
+	&:hover
+		text-shadow: #ff5207 1px 0 10px;
+
+.mail
+	display: flex
+	align-items: center
+	&:hover
+		text-shadow: #ff5207 1px 0 10px;
+
+.address
+	display: flex
+	align-items: center
+	&:hover
+		text-shadow: #ff5207 1px 0 10px;	
+
+@media (max-width: 600px)
+	.main-page
+		height: auto
+	.menu__list
+		flex-direction: column
+		align-items: center
+		padding: 0
+	.header
+		flex-direction: column
+		height: 200px
+		padding: 0
+	.text-card
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+	.main-title
+		font-size: 2em
+	.description
+		font-size: 24px
+	.try-button
+		width: 235px
+		height: 50px
+	.try-button a 
+		font-size: 20px
+	.main-page
+		display: flex
+		flex-direction: column
+		justify-content: center
+	section.pluses
+		width: 100%
+		height: 800px
+		justify-content: space-around
+	.top-side
+		flex-direction: column
+		justify-content: center
+		flex: 1 0 auto
+	.bottom-side 
+		flex-direction: column
+		justify-content: center
+		flex: 1 0 auto
+	div.card
+		width: 50%
+	section.items
+		flex 1 0 auto
+		height: auto
+	div.card-item
+		width: 50%
+		height: 200px
+		font-size: 1.5em
+	div.top-side-items
+		flex-direction: column
+		justify-content: center
+		flex: 1 0 auto
+	div.bottom-side-items
+		flex-direction: column
+		justify-content: center
+		flex: 1 0 auto
+	
+	.footer
+		flex-direction: column
+		height: auto
+	.bottom-links ul
+		height: 200px
+		flex-direction: column
+	// .top-side-items
+	// 	flex-direction: column
+	// .bottom-side-items
+	// 	flex-direction: column
+	// .items
+	// 	height: auto
+	.gal-main
+		display: none
+	div.gallery-pic
+		flex-direction: column
+	.gal-item
+		// height: auto
+		width: auto
+/////
+
+@media (max-width: 1700px)
+	.bottom-links ul
+		font-size: 1em
+
+@media (max-width: 1420px)
+	.bottom-links ul
+		font-size: 1em
+	.bottom-links ul
+		height: 200px
+		flex-direction: column
+	.header__menu
+		flex 1 1 auto
+	div.card-item
+		font-size: 1.3em
+	div.gallery-pic
+		overflow-x: auto
+
+@media (max-width: 875px)
+	.header__menu ul
+		flex-direction: column
+	.header__menu
+		flex 0 1 auto
+	body
+		background-image: none
+		// background: linear-gradient(black, rgba(34, 32, 32, 0.7));
+		background-color: #0b0a0a
+	.footer
+		flex-direction: column
+		height: auto
+	.main-title
+		font-size: 3em
+	.description
+		font-size: 24px
+	.main-page
+		height: auto
+	
+
+section.item
+	display: flex
+	flex-direction: column
+	align-items: center
+	// height: 800px
+	justify-content: space-around
+	background: linear-gradient(black, rgba(34, 32, 32, 0.7));
+
+.item-title
+	font-size: 2em
+
+.image-and_description
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+	height: 650px	
+
+.current-image
+	height: 600px
+	box-shadow: 0px 0px 5px 5px #ff5207;
+
+.control-image
+	display: flex
+	width: 70px
+	justify-content: space-between
+	border: 3px solid #ff5207;
+
+div.desc
+	padding-left: 10%
+	padding-bottom: 10px	
+	font-size: 1.5em
+	color: white
+	background: rgba(34, 32, 32, 0.7);
+
+div.desc p 
+	&:hover
+		text-shadow: #ff5207 1px 0 10px;
+
+.table-and-graphs
+	width: 90%
+	margin: auto	
+
+section.table-and-graphs
+	overflow-x: auto;
+
+.diff-table
+	color: white
+	background: rgba(34, 32, 32, 0.7);
+	display: block;
+	max-width: -moz-fit-content;
+	max-width: fit-content;
+	margin: 0 auto;
+	overflow-x: auto;
+	white-space: nowrap;
+
+.diff-table tr 
+	&:hover
+		text-shadow: #ff5207 1px 0 10px;
+td
+	min-width: 150px
+
+
+//////////
+.graphs
+	padding: 50px
+	color: white

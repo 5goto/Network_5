@@ -1,21 +1,73 @@
-<!DOCTYPE html>
-html
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-		title
-		link(rel="stylesheet", href="css/bootstrap-reboot.min.css")
-		link(rel="stylesheet", href="css/main.css")
-	body
+extends templates/header
+block variables 
+	-currentPage = "index"
+block main
+	main.main
+		section.main-page
+			div.text-card
+				div.text-wrap-main
+					p.promo Салон музыкальных инструментов
+					p.main-title Music ShowRoom
+					p.description Прикоснитесь к легендарному <br/>качеству уже сегодня
+					//- p.try-button
+					//- a(class="try-button" href="")
+					//- 	p Попробовать
+		section.pluses 
+			div.top-side
+				div.card
+					img(src="/img/global.png", alt="")
+					p.inner-card-text Удобная система заказов интересующих вас товаров
+				div.card 
+					img(src="/img/gift.png", alt="")
+					p.inner-card-text Бонусы и подарки для каждого клиента
+			div.bottom-side
+				div.card
+					img(src="/img/box.png", alt="")
+					p.inner-card-text Возможность доставки ваших покупок в любую точку страны
+				div.card
+					img(src="/img/revord.png", alt="")
+					p.inner-card-text Нас выбирают известные студии и музыкальные сообщества
+		section.items
+			h2 Гитары
+			div.top-side-items
+				div.card-item
+					img(class='guitar-tab' src="/img/acoustic.png", alt="")
+					p.inner-card-text Акустические гитары
+				div.card-item
+					img(class='guitar-tab' src="/img/classic.png", alt="")
+					p.inner-card-text Классические гитары
+			div.bottom-side-items
+				div.card-item
+					img(class='guitar-tab' src="/img/electro.png", alt="")
+					a(href="guitar.html")
+						p.inner-card-text Электрогитары
+				div.card-item
+					img(class='guitar-tab' src="/img/bass.png", alt="")
+					p.inner-card-text Басс-гитары
+		section.gallery
+			h2.description-gallery Галерея
+			img(class='gal-main' src="/img/bass_g.jpg", alt="")
+			div.gallery-pic
+				img(class='gal-item' src="/img/bass_g.jpg", alt="")
+				img(class='gal-item' src="/img/classic_big.jpg", alt="")
+				img(class='gal-item' src="/img/electro.jpg", alt="")
+				img(class='gal-item' src="/img/footer_part.jpg", alt="")
+				img(class='gal-item' src="/img/ins1.png", alt="")
+				img(class='gal-item' src="/img/room.jpg", alt="")
+	footer.footer 
+		div.bottom-links
+			ul
+						each key, value in { 'Каталог' : '#' , 'Студия': '#', 'Наши партнеры' :'#', 'Наша команда' :'#', 'F.A.Q' :'#', 'Сравнительная таблица гитар' :'table'}
+							li
+								a(href= key + ".html")= value
+		div.contacts
+			div.phone
+				img(src="/img/phone.png", alt="")
+				p +79245553124
+			div.mail
+				img(src="/img/mail.png", alt="")
+				p musicShowroom@gmail.com
+			div.address
+				img(src="/img/locate.png", alt="")
+				p г. Владивосток, ул. Некрасовская, д. 3
 
-		//- Introduce
-		p Successfully!
-		p Now you have Browser Sync, Pug, Stylus, Autoprefixer, jQuery, Bootstrap Reboot
-		p Folder src/ for PSD templates, JPG previews etc.
-		p Folder app/ for Pug and Stylus files. app/pug/index.pug will transpiled to dist/index.html. app/styl/main.styl will transpiled to dist/css/main.css
-		p Folder dist/ - distributive folder - here transpiled index.html and css/main.css, and you can add here other CSS, JS, IMG, FONTS files
-		p Have a nice coding :)
-
-		//- Scripts
-		script(src="js/jquery-3.5.1.min.js")
-		script(src="js/main.js")

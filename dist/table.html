@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="logo"><a href="index.html">MusRoom</a></div>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li><a href="#.html">Каталог</a></li>
+            <li><a href="#.html">Студия</a></li>
+            <li><a href="#.html">Наши партнеры</a></li>
+            <li><a href="#.html">Наша команда</a></li>
+            <li><a href="#.html">F.A.Q</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="graphs">
+        <div class="first"> 
+          <details>
+            <summary>Построение графика</summary>
+            <form>
+              <table>
+                <tr>
+                  <th>Значениe по оси OX</th>
+                  <th>Результат</th>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="radio" name="absc" value="0"/>Производитель <br>
+                  </td>
+                  <td>
+                    <input type="checkbox" name="ord" value="0"/>Длина мензуры <br>
+                    <input type="checkbox" name="ord" value="1"/>Год производства <br>
+                  </td>
+                </tr>
+              </table>
+              <input type="button" value="Построить график"/>
+            </form>
+          </details>
+        </div>
+        <div class="second"> 
+          <details>
+            <summary>Сортировка</summary>
+            <form>
+              <select name="sortFirst">
+                <option value="0">Название</option>
+                <option value="1">Количество ладов</option>
+                <option value="2">Цена</option>
+                <option value="3">Материал топа</option>
+                <option value="4">Цвет</option>
+              </select>
+              <input type="button" value="Сортировка 1-ый уровень"/>
+            </form>
+            <form>
+              <select name="sortSecond">
+                <option value="0">Название</option>
+                <option value="1">Количество ладов</option>
+                <option value="2">Цена</option>
+                <option value="3">Материал топа</option>
+                <option value="4">Цвет</option>
+              </select>
+              <input type="button" value="Сортировка 2-ой уровень"/>
+            </form>
+            <form>
+              <select name="sortThird">
+                <option value="0">Название</option>
+                <option value="1">Количество ладов</option>
+                <option value="2">Цена</option>
+                <option value="3">Материал топа</option>
+                <option value="4">Цвет</option>
+              </select>
+              <input type="button" value="Сортировка 3-ий уровень"/>
+            </form>
+          </details>
+        </div>
+        <div class="third"> 
+          <details>
+            <summary>Фильтр</summary>
+            <form>
+              <p> 
+                <label for="BrandName">Производитель <br>
+                  <input type="text" name="Brand"/>
+                </label>
+              </p>
+              <p> 
+                <label for="topMat">Модель <br>
+                  <input type="text" name="topMaterial"/>
+                </label>
+              </p>
+              <p>
+                <label for="fret">Количество ладов <br> 
+                  <input type="text" name="fretNumPre"/>(Минимум) <br>
+                  <input type="text" name="fretNumTo"/>(Максимум) <br>
+                </label>
+                <label for="color">Форма корпуса <br>
+                  <input type="text" name="typeName"/>
+                </label>
+              </p>
+              <p>
+                <label for="yFrom">Год производства <br> От
+                  <input type="text" name="yearPre"/><br>До
+                  <input type="text" name="yearTo"/>
+                </label><br/>
+                <input type="button" value="Поиск"/>
+              </p>
+              <p>
+                <label for="yFrom">Длина мензуры <br> От 
+                  <input type="text" name="menPre"/><br> До
+                  <input type="text" name="menTo"/>
+                </label><br/>
+                <input type="button" value="Поиск"/>
+              </p>
+              <p>Количество струн <br>
+                <input type="radio" name="stringsNum" value="0"/>6<br>
+                <input type="radio" name="stringsNum" value="1"/>7<br>
+                <input type="radio" name="stringsNum" value="2"/>8<br>
+              </p>
+              <input type="button" value="Поиск"/>
+            </form>
+          </details>
+        </div>
+      </section>
+      <section class="table-and-graphs">
+        <table class="diff-table"> 
+          <tr> 
+            <td>Производитель</td>
+            <td>Модель</td>
+            <td>Форма корпуса</td>
+            <td>Количество струн</td>
+            <td>Количество ладов</td>
+            <td>Длина мензуры</td>
+            <td>Год производства</td>
+          </tr>
+          <tr> 
+            <td>Rusich</td>
+            <td>Balalayka HH Red Russia 2022</td>
+            <td>Balalaika</td>
+            <td>6</td>
+            <td>24</td>
+            <td>24.75</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Rusich</td>
+            <td>Crusader HH Red Russia 2022</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Rusich</td>
+            <td>Stratocaster SSS Brown Russia 2022</td>
+            <td>Starcaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Rusich</td>
+            <td>Berserk Black HS Black Russia 2022</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>27</td>
+            <td>25.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Solar Guitars</td>
+            <td>A2.6FBB Baritone Flame Black Matte</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>24</td>
+            <td>26.5</td>
+            <td>2019</td>
+          </tr>
+          <tr> 
+            <td>Rusich</td>
+            <td>Grinch HH Green Russia 2022</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Cort</td>
+            <td>KX300 Etched Black Red</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2004</td>
+          </tr>
+          <tr> 
+            <td>Rusich</td>
+            <td>Spider HH Russia 2022</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>27</td>
+            <td>25.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Aria</td>
+            <td>PE-EXO Natural</td>
+            <td>Single cut</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2001</td>
+          </tr>
+          <tr> 
+            <td>Aria</td>
+            <td>HM-III MS Silver</td>
+            <td>Warlock</td>
+            <td>6</td>
+            <td>20</td>
+            <td>25.5</td>
+            <td>2005</td>
+          </tr>
+          <tr> 
+            <td>Aria</td>
+            <td>MAC-60 Blue</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2001</td>
+          </tr>
+          <tr> 
+            <td>Rusich</td>
+            <td>Navigator HH Natural Russia 2022</td>
+            <td>Warrior</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Aria</td>
+            <td>HM-III MBK</td>
+            <td>Warlock</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2011</td>
+          </tr>
+          <tr> 
+            <td>Aria</td>
+            <td>MAC-60 AN Amber Natural</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2008</td>
+          </tr>
+          <tr> 
+            <td>Cort</td>
+            <td>CR250 Vintage Burst</td>
+            <td>Single cut</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2009</td>
+          </tr>
+          <tr> 
+            <td>Burny</td>
+            <td>RLG60 VLD</td>
+            <td>Les Paul</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2019</td>
+          </tr>
+          <tr> 
+            <td>Rusich</td>
+            <td>Spider SH Red Russia 2022</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>27</td>
+            <td>25.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Aria</td>
+            <td>MAC-45 2TS Two Tone Sunburst</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2002</td>
+          </tr>
+          <tr> 
+            <td>Epiphone</td>
+            <td>Les Paul Special Vintage Edition Vintage Sunburst</td>
+            <td>Les Paul</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2019</td>
+          </tr>
+          <tr> 
+            <td>Fernandes</td>
+            <td>Revolver XX RXX06 Black</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2014</td>
+          </tr>
+          <tr> 
+            <td>Fernandes</td>
+            <td>Stratocaster LE-1Z HH Laurel FB Cream White</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2010</td>
+          </tr>
+          <tr> 
+            <td>Aria</td>
+            <td>HM-IV BK Black</td>
+            <td>Warlock</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2007</td>
+          </tr>
+          <tr> 
+            <td>Fernandes</td>
+            <td>Stratocaster LE-1Z SSS Laurel FB Black</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2005</td>
+          </tr>
+          <tr> 
+            <td>Fernandes</td>
+            <td>Stratocaster LE-1Z SSS Maple FB 2-Tone Sunburst</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2007</td>
+          </tr>
+          <tr> 
+            <td>Fernandes</td>
+            <td>Revolver X RX08 Metallic Red</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2007</td>
+          </tr>
+          <tr> 
+            <td>Fernandes</td>
+            <td>Revolver XX RXX06 Snow White</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2013</td>
+          </tr>
+          <tr> 
+            <td>Fernandes</td>
+            <td>Stratocaster LE-1Z SSS Laurel FB Candy Apple Red</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2004</td>
+          </tr>
+          <tr> 
+            <td>Aria</td>
+            <td>MAC-30 BK Black</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2003</td>
+          </tr>
+          <tr> 
+            <td>Fernandes</td>
+            <td>Stratocaster LE-1Z SSS Laurel FB 3-Tone Sunburst</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2000</td>
+          </tr>
+          <tr> 
+            <td>Ukolov Guitars</td>
+            <td>Lotus MS-6 HH Natural Russia 2022</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>24</td>
+            <td>26.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Ukolov Guitars</td>
+            <td>RGS Custom HH Natural Russia 2022</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Rusich</td>
+            <td>Avatar SH Blue Russia 2022</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>27</td>
+            <td>25.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Ukolov Guitars</td>
+            <td>Tanto MS-6 HH Ash Natural Russia 2022</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>24</td>
+            <td>26.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>Homage</td>
+            <td>HEG350 Telecaster SS Black</td>
+            <td>Telecaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2016</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Custom Shop Journeyman 50's Jazzmaster Relic Faded 3-color Sunburst</td>
+            <td>Jazzmaster</td>
+            <td>6</td>
+            <td>21</td>
+            <td>25.5</td>
+            <td>2000</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>American Ultra Stratocaster Maple FB Texas Tea</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2015</td>
+          </tr>
+          <tr> 
+            <td>G&L</td>
+            <td>Fullerton Deluxe S-500 Old School Tobacco Sunburst SSS USA w/gigbag 2020</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2020</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>75th Anniversary Commemorative Telecaster 2-color Bourbon Burst</td>
+            <td>Telecaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2011</td>
+          </tr>
+          <tr> 
+            <td>Bridgecraft</td>
+            <td>Music Village 1 Dragon-Thing Blue</td>
+            <td>Dragon-Thing</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2019</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Vintage Reissue '57 Stratocaster S-S-S Sunburst USA W/Case2008</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2020</td>
+          </tr>
+          <tr> 
+            <td>Gibson</td>
+            <td>Firebird HH Sunburst USA w/case 2019</td>
+            <td>Firebird</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2019</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>American Performer Telecaster SS Rosewood USA w/gigbag 2018</td>
+            <td>Telecaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2018</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>American Standard Stratocaster SSS Sunburst USA 2006</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2006</td>
+          </tr>
+          <tr> 
+            <td>Godin</td>
+            <td>SD 24 HSS Purple USA 2000's</td>
+            <td>Single cut</td>
+            <td>6</td>
+            <td>24</td>
+            <td>24.75</td>
+            <td>2000</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Stratocater MIM SSS Black Mexico w/gigbag 2008</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2008</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Deluxe Stratocaster SSS Black Mexico 2006</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2006</td>
+          </tr>
+          <tr> 
+            <td>Grass</td>
+            <td>Roots G-LP-60C BLK HH Black Korea 2000's</td>
+            <td>Les Paul</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2000</td>
+          </tr>
+          <tr> 
+            <td>Charvel</td>
+            <td>Refinement Les Paul HH Silver Japan 1990s</td>
+            <td>Les Paul</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>1990</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Squier Telecaster Contemporary HH Candy Apple Red China 2017</td>
+            <td>Telecaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2017</td>
+          </tr>
+          <tr> 
+            <td>Kramer</td>
+            <td>Striker HSS Sunburst Korea 1990's</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>1990</td>
+          </tr>
+          <tr> 
+            <td>Yamaha</td>
+            <td>RGX121Z HH Black Indonesia 2010's</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2010</td>
+          </tr>
+          <tr> 
+            <td>Charvette</td>
+            <td>by Charvel 170 HS Black Japan 1990's</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>1990</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Stratocaster Blacktop HH Black Mexico 2014</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2014</td>
+          </tr>
+          <tr> 
+            <td>Gibson</td>
+            <td>Les Paul LPJ "120th Anniversary" HH Cherry Satin w/gigbag USA 2014</td>
+            <td>Les Paul</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2014</td>
+          </tr>
+          <tr> 
+            <td>Mutagen</td>
+            <td>Steroid Strat SSS Green Russia 2010's</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2010</td>
+          </tr>
+          <tr> 
+            <td>Schecter</td>
+            <td>Custom Omen Extreme-6 Floyd Rose HH Vintage Sunburst Indonesia w/gigbag 2021</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2021</td>
+          </tr>
+          <tr> 
+            <td>Jackson</td>
+            <td>DK2M HH Crimson Swirl w/gigbag Japan 2009</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2009</td>
+          </tr>
+          <tr> 
+            <td>Epiphone</td>
+            <td>Les Paul Standard HH Pelham Blue China 2013 w/case</td>
+            <td>Les Paul</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2004</td>
+          </tr>
+          <tr> 
+            <td>RD</td>
+            <td>Artist Masterbuild H-H Natural w/gigbag Russia 2021</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2021</td>
+          </tr>
+          <tr> 
+            <td>Tokai</td>
+            <td>Love Rock LS60 2T HH Tobacoburst Japan 1981</td>
+            <td>Les Paul</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>1981</td>
+          </tr>
+          <tr> 
+            <td>Jackson</td>
+            <td>Pro DK2 HH Charcoal Grey w/gigbag Mexico 2017</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2017</td>
+          </tr>
+          <tr> 
+            <td>Epiphone</td>
+            <td>SG Standard HH Chery Red China 2000's</td>
+            <td>SG</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2000</td>
+          </tr>
+          <tr> 
+            <td>Gibson</td>
+            <td>Les Paul Junior LPJ HH White w/gigbag USA 2013</td>
+            <td>Les Paul</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2013</td>
+          </tr>
+          <tr> 
+            <td>Washburn</td>
+            <td>Mercury MG-94 HSH Natural USA 1992</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>1992</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Stratocaster Standard SSS 3-Tone Sunburst Mexico 2005</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>21</td>
+            <td>25.5</td>
+            <td>2005</td>
+          </tr>
+          <tr> 
+            <td>PRS</td>
+            <td>SE Tremonti Standard HH Black Korea 2002</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2002</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Stratocaster MN SSS Chrome Red w/gigbag Mexico 2006</td>
+            <td>Starcaster</td>
+            <td>6</td>
+            <td>21</td>
+            <td>25.5</td>
+            <td>2006</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Classic Series '72 Telecaster Custom SH Black w/case & gigbag Mexico 2010</td>
+            <td>Telecaster</td>
+            <td>6</td>
+            <td>21</td>
+            <td>25.5</td>
+            <td>2010</td>
+          </tr>
+          <tr> 
+            <td>Squier</td>
+            <td>Stratocaster Tom Delonge Surf Green H w/gigbag China 2000"s</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>21</td>
+            <td>25.5</td>
+            <td>2000</td>
+          </tr>
+          <tr> 
+            <td>Ibanez</td>
+            <td>Prestige RG1570 Blue HH Japan 2004</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2004</td>
+          </tr>
+          <tr> 
+            <td>Yamaha</td>
+            <td>RGX612D НSS White Japan 1980's</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>1980</td>
+          </tr>
+          <tr> 
+            <td>EVH</td>
+            <td>Wolfgang Standart Green HH Indonesia 2015</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2015</td>
+          </tr>
+          <tr> 
+            <td>History</td>
+            <td>SZ-1HM HSS CAR w/gigbag Japan 2005</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2005</td>
+          </tr>
+          <tr> 
+            <td>Epiphone</td>
+            <td>Les Paul Studio HH Sunburst Korea 1998</td>
+            <td>Les Paul</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>1998</td>
+          </tr>
+          <tr> 
+            <td>Aria</td>
+            <td>Pro II PE-INSPIRE Super Grade Series Natural Korea 2000s</td>
+            <td>Les Paul</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2000</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Squier Telecaster Deluxe MN HH Black China 2020s</td>
+            <td>Thunderbird</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2020</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Telecaster SS Butterscotch Blonde w/gigbag USA 2016</td>
+            <td>Telecaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2016</td>
+          </tr>
+          <tr> 
+            <td>Carvin</td>
+            <td>DC-127 HH Black w/gigbag USA 1990s</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>1990</td>
+          </tr>
+          <tr> 
+            <td>Ibanez</td>
+            <td>RX180GQ HSH Tabacco Burst Japan 1990s</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>1990</td>
+          </tr>
+          <tr> 
+            <td>LTD</td>
+            <td>Viper 200-FM HH STBC Indonesia 2006</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>24</td>
+            <td>24.75</td>
+            <td>2006</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Highway One Telecaster SS 3-color Sunburst USA 2006</td>
+            <td>Telecaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2006</td>
+          </tr>
+          <tr> 
+            <td>Schecter</td>
+            <td>Diamond Series X50 HH Black Indonesia 2009</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2009</td>
+          </tr>
+          <tr> 
+            <td>FireWood</td>
+            <td>Mockingbird Masterbild Black w/case Europe 2010s</td>
+            <td>Mockingbird</td>
+            <td>6</td>
+            <td>24</td>
+            <td>25.5</td>
+            <td>2010</td>
+          </tr>
+          <tr> 
+            <td>Squier</td>
+            <td>by Fender Affinity Stratocaster SSS Black China 2010s</td>
+            <td>Starcaster</td>
+            <td>6</td>
+            <td>21</td>
+            <td>25.5</td>
+            <td>2010</td>
+          </tr>
+          <tr> 
+            <td>Baccus</td>
+            <td>Universe Stratocaster SSS Black China 2010's</td>
+            <td>Starcaster</td>
+            <td>6</td>
+            <td>21</td>
+            <td>25.5</td>
+            <td>2010</td>
+          </tr>
+          <tr> 
+            <td>Greco</td>
+            <td>Device SPF-40 Black Japan 1987</td>
+            <td>Superstrat</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.8</td>
+            <td>1987</td>
+          </tr>
+          <tr> 
+            <td>Fender</td>
+            <td>Bullet Deluxe SS Vintage Blonde w/gigbag USA 1980's</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>21</td>
+            <td>25.5</td>
+            <td>1980</td>
+          </tr>
+          <tr> 
+            <td>Constructor</td>
+            <td>Stratocaster SSS Natural Brown Russia 2022</td>
+            <td>Stratocaster</td>
+            <td>6</td>
+            <td>22</td>
+            <td>25.5</td>
+            <td>2022</td>
+          </tr>
+          <tr> 
+            <td>B.C.Rich</td>
+            <td>Marion HH Black China 2000s</td>
+            <td>Double cut</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2000</td>
+          </tr>
+          <tr> 
+            <td>Gibson</td>
+            <td>Explorer HH Black w/case w/gigbag USA 2001</td>
+            <td>Explorer</td>
+            <td>6</td>
+            <td>22</td>
+            <td>24.75</td>
+            <td>2001</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/main.js"> </script>
+  </body>
+</html>

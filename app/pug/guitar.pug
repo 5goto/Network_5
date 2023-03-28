@@ -1,0 +1,40 @@
+extends templates/header
+block variables 
+	-currentPage = "index"
+block main
+	main.main
+		section.item
+			h2.item-title SQUIER AFFINITY TELECASTER MN 2-COLOR SUNBURST
+			.image-and_description 
+				img(class='current-image' src="/img/strat/strat.png", alt="")
+				.control-image
+					img(class='control' src="/img/strat/left.png", alt="")
+					img(class='control' src="/img/strat/right.png", alt="")
+		div.desc
+			p Цвет: 2-х цветный санбёрст
+			p Гриф: клён, С-образный профиль грифа
+			p Радиус накладки: 9,5`, инкрустация в виде точек
+			p Лады: 21 Medium Jumbo
+			p Мензура: 25,5` (648 мм)
+			p Ширина верхнего порожка: 1,6` (40,6 мм)
+			p Звукосниматели: S/S
+			p Регуляторы: 1 громкость, 1 тон, 3-х позиционный Переключатель звукоснимателей
+			p Бридж: 6-Saddle Top-Load Tele®
+			p Колки: Standard Die-Cast
+			p Фурнитура: цвет хром
+	footer.footer 
+		div.bottom-links
+			ul
+						each key, value in { 'Каталог' : '#' , 'Студия': '#', 'Наши партнеры' :'#', 'Наша команда' :'#', 'F.A.Q' :'#'}
+							li
+								a(href= key + ".html")= value
+		div.contacts
+			div.phone
+				img(src="/img/phone.png", alt="")
+				p +79245553124
+			div.mail
+				img(src="/img/mail.png", alt="")
+				p musicShowroom@gmail.com
+			div.address
+				img(src="/img/locate.png", alt="")
+				p г. Владивосток, ул. Некрасовская, д. 3
