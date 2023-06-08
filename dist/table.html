@@ -48,36 +48,37 @@
         <div class="second"> 
           <details>
             <summary>Сортировка</summary>
-            <form>
+            <form class="fSort">
               <select name="sortFirst">
-                <option value="0">Название</option>
-                <option value="1">Количество ладов</option>
-                <option value="2">Цена</option>
-                <option value="3">Материал топа</option>
-                <option value="4">Цвет</option>
+                <option value="0">Нет</option>
+                <option value="manufactor">Производитель</option>
+                <option value="formBody">Форма корпуса</option>
+                <option value="stringsNum">Количество струн</option>
+                <option value="menz">Длина мензуры</option>
+                <option value="yearCreated">Год производства</option>
               </select>
-              <input type="button" value="Сортировка 1-ый уровень"/>
             </form>
-            <form>
-              <select name="sortSecond">
-                <option value="0">Название</option>
-                <option value="1">Количество ладов</option>
-                <option value="2">Цена</option>
-                <option value="3">Материал топа</option>
-                <option value="4">Цвет</option>
+            <form class="sSort">
+              <select name="sortSecond" disabled="disabled">
+                <option value="0">Нет</option>
+                <option value="manufactor">Производитель</option>
+                <option value="formBody">Форма корпуса</option>
+                <option value="stringsNum">Количество струн</option>
+                <option value="menz">Длина мензуры</option>
+                <option value="yearCreated">Год производства</option>
               </select>
-              <input type="button" value="Сортировка 2-ой уровень"/>
             </form>
-            <form>
-              <select name="sortThird">
-                <option value="0">Название</option>
-                <option value="1">Количество ладов</option>
-                <option value="2">Цена</option>
-                <option value="3">Материал топа</option>
-                <option value="4">Цвет</option>
+            <form class="tSort">
+              <select name="sortThird" disabled="disabled">
+                <option value="0">Нет</option>
+                <option value="manufactor">Производитель</option>
+                <option value="formBody">Форма корпуса</option>
+                <option value="stringsNum">Количество струн</option>
+                <option value="menz">Длина мензуры</option>
+                <option value="yearCreated">Год производства</option>
               </select>
-              <input type="button" value="Сортировка 3-ий уровень"/>
             </form>
+            <input type="button" value="Сортировка" id="first-level-sort"/>
           </details>
         </div>
         <div class="third"> 
@@ -86,43 +87,35 @@
             <form>
               <p> 
                 <label for="BrandName">Производитель <br>
-                  <input type="text" name="Brand"/>
-                </label>
-              </p>
-              <p> 
-                <label for="topMat">Модель <br>
-                  <input type="text" name="topMaterial"/>
+                  <input type="text" name="brand"/>
                 </label>
               </p>
               <p>
-                <label for="fret">Количество ладов <br> 
-                  <input type="text" name="fretNumPre"/>(Минимум) <br>
-                  <input type="text" name="fretNumTo"/>(Максимум) <br>
-                </label>
                 <label for="color">Форма корпуса <br>
-                  <input type="text" name="typeName"/>
+                  <input type="text" name="typeName"/>	
                 </label>
               </p>
               <p>
                 <label for="yFrom">Год производства <br> От
-                  <input type="text" name="yearPre"/><br>До
+                  <input type="text" name="yearPre"/><br> До
                   <input type="text" name="yearTo"/>
                 </label><br/>
-                <input type="button" value="Поиск"/>
+                <input type="button" value="Поиск" id="main-search"/>
               </p>
               <p>
                 <label for="yFrom">Длина мензуры <br> От 
                   <input type="text" name="menPre"/><br> До
                   <input type="text" name="menTo"/>
                 </label><br/>
-                <input type="button" value="Поиск"/>
+                <input type="button" value="Поиск" id="menz-search"/>
               </p>
               <p>Количество струн <br>
-                <input type="radio" name="stringsNum" value="0"/>6<br>
-                <input type="radio" name="stringsNum" value="1"/>7<br>
-                <input type="radio" name="stringsNum" value="2"/>8<br>
+                <input type="radio" name="stringsNum" value="6"/>6<br>
+                <input type="radio" name="stringsNum" value="7"/>7<br>
+                <input type="radio" name="stringsNum" value="8"/>8<br>
               </p>
-              <input type="button" value="Поиск"/>
+              <input type="button" value="Поиск" id="string-button"/>
+              <input type="button" value="Refrash" id="refrash-table"/>
             </form>
           </details>
         </div>
@@ -144,14 +137,14 @@
             <td>Balalaika</td>
             <td>6</td>
             <td>24</td>
-            <td>24.75</td>
+            <td>27</td>
             <td>2022</td>
           </tr>
           <tr> 
             <td>Rusich</td>
             <td>Crusader HH Red Russia 2022</td>
             <td>Double cut</td>
-            <td>6</td>
+            <td>8</td>
             <td>24</td>
             <td>25.5</td>
             <td>2022</td>
@@ -169,7 +162,7 @@
             <td>Rusich</td>
             <td>Berserk Black HS Black Russia 2022</td>
             <td>Double cut</td>
-            <td>6</td>
+            <td>7</td>
             <td>27</td>
             <td>25.5</td>
             <td>2022</td>
@@ -205,7 +198,7 @@
             <td>Rusich</td>
             <td>Spider HH Russia 2022</td>
             <td>Double cut</td>
-            <td>6</td>
+            <td>7</td>
             <td>27</td>
             <td>25.5</td>
             <td>2022</td>
@@ -225,7 +218,7 @@
             <td>Warlock</td>
             <td>6</td>
             <td>20</td>
-            <td>25.5</td>
+            <td>28</td>
             <td>2005</td>
           </tr>
           <tr> 
@@ -241,7 +234,7 @@
             <td>Rusich</td>
             <td>Navigator HH Natural Russia 2022</td>
             <td>Warrior</td>
-            <td>6</td>
+            <td>7</td>
             <td>24</td>
             <td>25.5</td>
             <td>2022</td>
@@ -592,7 +585,7 @@
             <td>Yamaha</td>
             <td>RGX121Z HH Black Indonesia 2010's</td>
             <td>Superstrat</td>
-            <td>6</td>
+            <td>7</td>
             <td>22</td>
             <td>25.5</td>
             <td>2010</td>
@@ -601,7 +594,7 @@
             <td>Charvette</td>
             <td>by Charvel 170 HS Black Japan 1990's</td>
             <td>Superstrat</td>
-            <td>6</td>
+            <td>7</td>
             <td>24</td>
             <td>25.5</td>
             <td>1990</td>
@@ -628,7 +621,7 @@
             <td>Mutagen</td>
             <td>Steroid Strat SSS Green Russia 2010's</td>
             <td>Stratocaster</td>
-            <td>6</td>
+            <td>7</td>
             <td>22</td>
             <td>25.5</td>
             <td>2010</td>
@@ -675,14 +668,14 @@
             <td>Les Paul</td>
             <td>6</td>
             <td>22</td>
-            <td>24.75</td>
+            <td>29</td>
             <td>1981</td>
           </tr>
           <tr> 
             <td>Jackson</td>
             <td>Pro DK2 HH Charcoal Grey w/gigbag Mexico 2017</td>
             <td>Superstrat</td>
-            <td>6</td>
+            <td>8</td>
             <td>24</td>
             <td>25.5</td>
             <td>2017</td>
@@ -720,7 +713,7 @@
             <td>Stratocaster</td>
             <td>6</td>
             <td>21</td>
-            <td>25.5</td>
+            <td>28</td>
             <td>2005</td>
           </tr>
           <tr> 
@@ -774,7 +767,7 @@
             <td>Superstrat</td>
             <td>6</td>
             <td>24</td>
-            <td>25.5</td>
+            <td>30</td>
             <td>1980</td>
           </tr>
           <tr> 
@@ -873,7 +866,7 @@
             <td>Double cut</td>
             <td>6</td>
             <td>22</td>
-            <td>25.5</td>
+            <td>27</td>
             <td>2009</td>
           </tr>
           <tr> 
@@ -949,6 +942,7 @@
             <td>2001</td>
           </tr>
         </table>
+        <div class="mount-point"></div>
       </section>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

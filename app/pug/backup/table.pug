@@ -24,31 +24,30 @@ block main
 		.second 
 			details
 				summary Сортировка
-				form.fSort
+				form
 					select(name="sortFirst")
-						option(value="0") Нет
-						option(value="manufactor") Производитель
-						option(value="formBody") Форма корпуса
-						option(value="stringsNum") Количество струн
-						option(value="menz") Длина мензуры
-						option(value="yearCreated") Год производства
-				form.sSort
-					select(name="sortSecond" disabled)
-						option(value="0") Нет
-						option(value="manufactor") Производитель
-						option(value="formBody") Форма корпуса
-						option(value="stringsNum") Количество струн
-						option(value="menz") Длина мензуры
-						option(value="yearCreated") Год производства
-				form.tSort
-					select(name="sortThird" disabled)
-						option(value="0") Нет
-						option(value="manufactor") Производитель
-						option(value="formBody") Форма корпуса
-						option(value="stringsNum") Количество струн
-						option(value="menz") Длина мензуры
-						option(value="yearCreated") Год производства
-				input(type="button" value="Сортировка" id='first-level-sort')
+						option(value="0") Название
+						option(value="1") Количество ладов
+						option(value="2") Цена
+						option(value="3") Материал топа
+						option(value="4") Цвет
+					input(type="button" value="Сортировка 1-ый уровень")
+				form
+					select(name="sortSecond")
+						option(value="0") Название
+						option(value="1") Количество ладов
+						option(value="2") Цена
+						option(value="3") Материал топа
+						option(value="4") Цвет
+					input(type="button" value="Сортировка 2-ой уровень")
+				form
+					select(name="sortThird")
+						option(value="0") Название
+						option(value="1") Количество ладов
+						option(value="2") Цена
+						option(value="3") Материал топа
+						option(value="4") Цвет
+					input(type="button" value="Сортировка 3-ий уровень")
 
 
 		.third 
@@ -57,8 +56,16 @@ block main
 				form
 					p 
 						label(for="BrandName") Производитель <br>
-							input(type="text" name="brand")
+							input(type="text" name="Brand")
+					p 
+						label(for="topMat") Модель <br>
+							input(type="text" name="topMaterial")
 					p
+						label(for="fret") Количество ладов <br> 
+							input(type="text" name="fretNumPre")
+							|(Минимум) <br>
+							input(type="text" name="fretNumTo")
+							|(Максимум) <br>
 						label(for="color") Форма корпуса <br>
 							input(type="text" name="typeName")
 							|	
@@ -68,7 +75,7 @@ block main
 							|<br> До
 							input(type="text" name="yearTo")
 						br
-						input(type="button" value="Поиск" id='main-search')
+						input(type="button" value="Поиск")
 					p
 						label(for="yFrom") Длина мензуры <br> От 
 							input(type="text" name="menPre")
@@ -816,4 +823,4 @@ block main
 				td 22
 				td 24.75
 				td 2001
-		div.mount-point
+

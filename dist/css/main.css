@@ -503,6 +503,7 @@ section.table-and-graphs {
   margin: 0 auto;
   overflow-x: auto;
   white-space: nowrap;
+  padding: 1.5em;
 }
 .diff-table tr:hover {
   text-shadow: #ff5207 1px 0 10px;
