@@ -9,18 +9,18 @@ block main
 				form
 					table
 						tr
-							th Значениe по оси OX
-							th Результат
+							th OX
+							th OY
 						tr
 							td
-								input(type="radio" name="absc" value="0")
+								input(class="oX" type="radio" name="ox" value="manufactor" checked)
 								| Производитель <br>
 							td
-								input(type="checkbox" name="ord" value="0")
+								input(class='oY' type="checkbox" name="oy" value="menz")
 								| Длина мензуры <br>
-								input(type="checkbox" name="ord" value="1")
+								input(class='oY' type="checkbox" name="oy" value="yearCreated")
 								| Год производства <br>
-					input(type="button" value="Построить график")
+					input(type="button" value="Построить график" id='makeGraph')
 		.second 
 			details
 				summary Сортировка
@@ -85,8 +85,8 @@ block main
 						|8<br>
 					input(type="button" value="Поиск" id="string-button")
 					input(type="button" value="Refrash" id="refrash-table")
-
 	section.table-and-graphs
+		svg(height="7")
 		table.diff-table 
 			tr 
 				td Производитель

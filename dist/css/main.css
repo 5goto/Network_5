@@ -515,3 +515,18 @@ td {
   padding: 50px;
   color: #fff;
 }
+svg {
+  margin-bottom: 50px;
+  color: #fff;
+}
+svg path,
+line {
+  fill: none;
+  stroke: #ce0a0a;
+  width: 1px;
+}
+svg .grid-line {
+  stroke: #000;
+  shape-rendering: crispedges;
+  stroke-opacity: 0.1;
+}
